@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    image: spring-docker-demo
+    build: .
+    ports:
+      - "8080:8080"
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: example
+
